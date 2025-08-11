@@ -1,0 +1,35 @@
+# 환경 파일
+.env
+
+# IDE 설정
+.idea/
+.vscode/
+.vs/
+
+# MacOS 생성 파일
+.DS_Store
+.DS_Store?
+node_modules/
+
+# 빌드 및 캐시
+/target/
+/coverage/
+/tests/napi/node_modules/
+/tests/napi/build/
+/tests/napi/third_party_tests/node_modules/
+/third_party/
+/flamebench*.svg
+/flamegraph*.svg
+
+# Jupyter 노트북 체크포인트
+.ipynb_checkpoints/
+Untitled*.ipynb
+
+# Playwright 브라우저 캐시
+/.ms-playwright
+
+# 기타
+*.orig
+*.pyc
+*.swp
+*.symcache
