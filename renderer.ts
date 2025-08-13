@@ -9,9 +9,14 @@ async function unocss(src: string): Promise<string> {
     const uno = await createGenerator({
         presets: [presetIcons(), presetUno()],
         transformers: [transformerDirectives()],
-        preflights: [{
-            getCSS: async ({theme}) => await Deno.readTextFile("./_assets/reset-css.css"),
-        }],
+        preflights: [
+            {
+                getCSS: async ({theme}) => await Deno.readTextFile("./_assets/reset-css.css"),
+            },
+            {
+                getCSS: async ({theme}) => await Deno.readTextFile("./_assets/github-markdown-css-light.css"),
+            }
+        ],
         // extractors: [
         //     extractorPug(),
         // ],
